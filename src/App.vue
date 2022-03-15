@@ -1,7 +1,8 @@
 <template>
   <div id="nav">
     <router-link to="/">Home</router-link>
-    <router-link to="/about">About</router-link>
+    <router-link :to= "{ name:'About'}">About</router-link>
+    <router-link :to= "{ name: 'Jobs'}">Jobs</router-link>
   </div>
   <router-view/>
 </template>
@@ -18,7 +19,7 @@
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+ 
 }
 
 #nav {
@@ -27,10 +28,14 @@
 
 #nav a {
   font-size: bold;
-  color: aqua;
+  color: rgb(8, 70, 70);
+  text-decoration: none;
+  padding: 10px;
+  border-radius:4px ;
 }
 
 #nav a.router-link-exact-active {
-  color: #42b983;
+  color: white;
+  background: rgb(204, 41, 68);
 }
 </style>
